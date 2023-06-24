@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+/*Dado un vector 15 valores, hacer un programa que pueda obtener, y sacar
+por pantalla:
+− el mayor de los valores
+− el menor de los valores
+− el más próximo al promedio*/
+int mayorElemento(int vec[],int tam)
+{
+    int mayor=0;
+    for(int i=0;i<tam;i++)
+    {
+       if (vec[i]>mayor)
+       mayor=vec[i];
+    }
+    return mayor;
+}
+
+int menorElemento(int vec[],int tam)
+{
+    int menor=vec[0];
+    for(int i=1;i<tam;i++)
+    {
+       menor=vec[0];
+       if (vec[i]<menor)
+       menor=vec[i];
+    }
+    return menor;
+}
+void promedio(int vec[],int tam)
+{
+    int suma=0;
+    for(int i=0;i<tam;i++)
+    {
+       suma+=vec[i];
+    }
+    int promedio=suma/tam;
+    
+}
+
+int main()
+{
+    int vec [15];
+    cout<<"Apartir de los numeros que elija para los elementos de un vector se realizaran 3 operaciones"<<endl;
+    cout<<"a)el mayor de los valores n/b)el menor de los valores n/c)el mas proximo al promedio"<<endl;
+
+    for (int i=0; i<15;i++)
+    {
+        cout<<"ingrese un valor para el elemento"<<i+1<<"del vector"<<endl;
+        cin<< vec[i];
+    }
+    cout<<"*******resultados*******"<<endl;
+    
+    cout<<"a)"<<mayorElemento(x[],15)<<endl;
+    cout<<"b)"<<menorElemento(x[],15)<<endl;
+}
