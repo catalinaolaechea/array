@@ -1,0 +1,22 @@
+/* Leer una lista de 10 valores enteros listarlos por pantalla en sentido inverso
+al que ingresaron*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int vector[5];
+    cout<<"ingrese elementos para el vector de tamaño 5"<<endl;
+    for(int i=0; i<5; i++)
+    {
+        cout<<"elemento "<<i+1<<" es"<<endl;
+        cin>>vector[i];
+    }
+    cout<<"ahora se mostraran los elementos en sentido inverso al ingresado"<<endl;
+    for(int k=4;k>=0;k--)
+    {
+        cout<<vector[k]<<endl;
+    }
+    return 0;
+}
