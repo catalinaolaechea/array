@@ -1,0 +1,39 @@
+/*Escriba en C++ un procedimiento que reciba el vector definido en el punto anterior, 
+el tamaño del vector y una fecha en formato AAAAMDD. El subprograma debe poner en 
+true el campo que indica que el envio fue entregado en todos aquellos envios que
+tengan fecha anterior a la indicada por parámetro*/
+#include <iostream>
+using namespace std;
+#include <conio.h>
+
+struct caracteristicasPedido
+{
+    int nroDeEncomienda;
+    float peso;
+    char direccionDeDestino [200];
+    char barrioDestino [50];
+    char nombres [50];
+    int fechaDeEntrega;
+    bool exitoEnLaEntrega;
+};
+void entrega(caracteristicasPedido encomiendas[], int cant, int fecha)
+{
+    for (int i=0; i<1000; i++)
+    {
+        if(encomiendas[i].fechaDeEntrega < fecha)
+        {
+           encomiendas[i].exitoEnLaEntrega=true; 
+        }
+    }
+}
+int main()
+{
+int &fecharef=20230320 /*AAAAMMDD*/
+for(int i=0; i<1000; i++)
+{
+    cout<<"ingrese la fecha de entrega en formato AAAAMMDD"<<endl;
+    cin>>encomiendas[i].fechaDeEntrega;
+}
+entrega(encomiendas,1000,fecharef);
+return 0;
+}
