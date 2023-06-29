@@ -1,0 +1,47 @@
+/*Una empresa de mensajeria necesita un sistema para administracion de las encomiendas.
+Confeccione en C++ el tipo de dadto conveniente para poder registrar en un vector hasta
+1000 encomiendas. Cada encomiendas tiene:Nro de encomienda (entero), Peso (real), 
+direccion de destino (hasta 200 caracteres). barrio destino (hasta 50 caracteres),
+apellidos y nombres del destinatario (hasta 50 caracteres), fecha de entrega pautada  
+(en formato AAAAMMDD) y si el envio fue entragado o no (bool)*/
+#include <iostream>
+using namespace std;
+#include <conio.h>
+
+struct caracteristicasPedido
+{
+    int nroDeEncomienda;
+    float peso;
+    char direccionDeDestino [200];
+    char barrioDestino [50];
+    char nombres [50];
+    int fechaDeEntrega;
+    bool exitoEnLaEntrega;
+};
+void cargaDeDatos(caracteristicasPedido encomiendas[],int cant)
+{
+for(int i=0; i<1000; i++)
+{
+    cout<<"ingrese su(s) nombre(s) y apellido(s)"<<endl;
+    cin>>encomiendas[i].nombres,50;
+    cout<<"ingrese el numero de encomienda"<<endl;
+    cin>>encomiendas[i].nroDeEncomienda;
+    cout<<"ingrese el peso de su pedido"<<endl;
+    cin>>encomiendas[i].peso;
+    cout<<"ingrese sus barrio"<<endl;
+    cin>>encomiendas[i].barrioDestino;
+    cout<<"ingrese la direccion exacta"<<endl;
+    cin>>encomiendas[i].direccionDeDestino;
+    cout<<"ingrese la fecha de entrega en formato AAAAMMDD"<<endl;
+    cin>>encomiendas[i].fechaDeEntrega;
+    cout<<"¿su pedido ya fue entregado?"<<endl;
+    cin>>encomiendas[i].exitoEnLaEntrega;
+    
+}
+}
+int main()
+{
+    caracteristicasPedido encomiendas[1000];
+    cargaDeDatos(encomiendas,1000);
+    return 0;
+}
