@@ -1,0 +1,66 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+int main()
+{
+    int dado1, dado2, sumaDados;
+    int uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez, once, doce;
+    cout<<"comencemos el juego"<<endl;
+    int numeroDelDado[50];
+    for(int i=0;i<50;i++)
+    {
+        dado1=(rand()%6 + 1);
+        dado2=(rand()%6 + 1);
+        numeroDelDado[i]=dado1+dado2;
+        sumaDados=dado1+dado2;
+        switch(sumaDados)
+        {
+          case 2:
+          dos+=1;
+          break;
+          case 3:
+          tres+=1;
+          break;
+          case 4:
+          cuatro+=1;
+          break;
+          case 5:
+          cinco+=1;
+          break;
+          case 6:
+          seis+=1;
+          break;
+          case 7:
+          siete+=1;
+          break;
+          case 8:
+          ocho+=1;
+          case 9:
+          break;
+          nueve+=1;
+          case 10:
+          break;
+          diez+=1;
+          case 11:
+          once+=1;
+          break;
+          case 12:
+          doce+=1;
+          break;
+        }
+    }  
+    cout<<"*********************RESULTADOS**************************"<<endl;
+    
+    cout<<"3 salio "<<dos<<" veces"<<endl;
+    cout<<"4 salio "<<tres<<" veces"<<endl;
+    cout<<"5 salio "<<cuatro<<" veces"<<endl;
+    cout<<"6 salio "<<cinco<<" veces"<<endl;
+    cout<<"7 salio "<<seis<<" veces"<<endl;
+    cout<<"8 salio "<<siete<<" veces"<<endl;
+    cout<<"9 salio "<<ocho<<" veces"<<endl;
+    cout<<"10 salio "<<nueve<<" veces"<<endl;
+    cout<<"11 salio "<<diez<<" veces"<<endl;
+    cout<<"12 salio "<<once<<" veces"<<endl;
+    cout<<"2 salio "<<uno<<" veces"<<endl;
+    return 0;
+}
